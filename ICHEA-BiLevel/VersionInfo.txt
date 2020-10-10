@@ -1,0 +1,55 @@
+matlab plot 4 axis and label updated
+now plotting top 5 instead of top one
+
+using hyperMutation in mutation. From big No to small no.
+categorizeChromesList slot size is changed.
+using cleanChromes(sols,sols.size()-solPop) hence other cleaning in main is removed.
+
+Update:09 Dec 2017
+Function: Chromosome.getRank()
+Changes:
+Prev: 
+if(/*CspProcess.getDyanmicTime() == 0 ||*/ CspProcess.getDyanmicTime()%2 == 1){
+	rank = getFitnessLowerLevel();
+}
+
+New:
+if(/*CspProcess.getDyanmicTime() == 0 ||*/ CspProcess.getDyanmicTime()%2 == 1){
+//                    rank = getFitnessLowerLevel();
+	if(options.length>0){  
+		if(options[0])//support bi-level fitness
+			rank = getFitnessVal(); // ????????????????? int val????
+		else
+			rank = getFitnessLowerLevel();
+	}else
+		rank =  getFitnessLowerLevel();//getFitnessVal();//
+}
+
+Update: 10 Dec 2017
+Function: Chromosome.compareTo()
+Section: 
+if(tmpSortBy == Chromosome.BY_VIOLATIONS 
+		|| tmpSortBy == Chromosome.BY_SATISFACTIONS
+		|| tmpSortBy == Chromosome.BY_FITNESS) //good to bad - less to more
+	//return this.getRank() - c.getRank();
+{
+...
+}
+
+Prev:
+else part
+else{
+	return 0
+}
+
+New:
+else{ //in case of equal?
+	if(MyMath.roundN(this.getRank(!sortByLowLevelFitness),CCSPfns.knownOptSolDP)
+	- MyMath.roundN(c.getRank(!sortByLowLevelFitness),CCSPfns.knownOptSolDP) >0) //?? need to check lower level as well
+		return 1;
+	else if (MyMath.roundN(this.getRank(!sortByLowLevelFitness),CCSPfns.knownOptSolDP)
+	- MyMath.roundN(c.getRank(!sortByLowLevelFitness),CCSPfns.knownOptSolDP) <0)
+		return -1;
+	else
+		return 0;
+}
