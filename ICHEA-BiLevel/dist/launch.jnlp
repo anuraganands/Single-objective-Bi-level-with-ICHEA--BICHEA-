@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<jnlp codebase="file:/C:/Users/sharma_au/Dropbox/bi-level/Release%20Version/ICHEA-BiLevel/dist/" href="launch.jnlp" spec="1.0+">
+<jnlp codebase="file:/C:/Users/sharma_au/Dropbox/bi-level/Release%20Version/Single-objective-Bi-level-with-ICHEA--BICHEA-/ICHEA-BiLevel/dist/" href="launch.jnlp" spec="1.0+">
     <information>
         <title>Basic Application Example</title>
         <vendor>Sun Microsystems Inc.</vendor>
@@ -9,11 +9,12 @@
     </information>
     <update check="always"/>
     <resources>
-        <j2se version="1.6+"/>
+        <j2se version="1.8+"/>
         <jar href="ICHEA-BiLevel.jar" main="true"/>
     <jar href="lib/AbsoluteLayout.jar"/>
 <jar href="lib/matlabcontrol-4.0.0.jar"/>
 <jar href="lib/appframework-1.0.3.jar"/>
+<jar href="lib/swing-worker.jar"/>
 </resources>
     <application-desc main-class="csp_gui.CSP_GUIApp">
     </application-desc>

@@ -1,9 +1,15 @@
 Manifest-Version: 1.0
-Ant-Version: Apache Ant 1.9.4
+Ant-Version: Apache Ant 1.10.4
 Created-By: 1.8.0_101-b13 (Oracle Corporation)
 X-COMMENT: Main-Class will be added automatically by build
-Codebase: C:\Users\sharma_au\Dropbox\bi-level\Release Version\ICHEA-Bi
- Level\dist
+Codebase: C:\Users\sharma_au\Dropbox\bi-level\Release Version\Single-o
+ bjective-Bi-level-with-ICHEA--BICHEA-\ICHEA-BiLevel\dist
+Application-Library-Allowable-Codebase: C:\Users\sharma_au\Dropbox\bi-
+ level\Release Version\Single-objective-Bi-level-with-ICHEA--BICHEA-\I
+ CHEA-BiLevel\dist
+Caller-Allowable-Codebase: C:\Users\sharma_au\Dropbox\bi-level\Release
+  Version\Single-objective-Bi-level-with-ICHEA--BICHEA-\ICHEA-BiLevel\
+ dist
 Permissions: sandbox
 Application-Name: Basic Application Example
 
